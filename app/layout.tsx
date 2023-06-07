@@ -1,5 +1,5 @@
-import HomeFooter from "./components/HomeFooter";
-import HomeHeader from "./components/HomeHeader";
+import HomeHeader from "@/components/HomeHeader";
+import HomeFooter from "@/components/HomeFooter";
 import "./globals.css";
 import { Raleway } from "next/font/google";
 

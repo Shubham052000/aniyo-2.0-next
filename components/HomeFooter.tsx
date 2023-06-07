@@ -1,7 +1,7 @@
 import React from "react";
 
 const HomeFooter = () => {
-  return <div>MainFooter</div>;
+  return <div>HomeFooter</div>;
 };
 
 export default HomeFooter;
