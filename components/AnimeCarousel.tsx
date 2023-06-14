@@ -1,5 +1,3 @@
-"use client";
-
 import { AnimeListType } from "@/types/types";
 import AnimeCard from "./AnimeCard";
 
@@ -9,8 +7,8 @@ export type AnimeCarouselProps = {
 
 const AnimeCarousel: React.FC<AnimeCarouselProps> = ({ animeList }) => {
   return (
-    <div className="flex flex-wrap justify-center gap-6">
-      {animeList.data?.slice(0, 15).map((anime) => {
+    <div className="mb-28 flex w-full flex-wrap justify-center gap-6 px-11">
+      {animeList.data?.slice(0, 10).map((anime) => {
         return <AnimeCard key={anime.mal_id} anime={anime} />;
       })}
     </div>
