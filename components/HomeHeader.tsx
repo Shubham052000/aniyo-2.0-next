@@ -7,7 +7,8 @@ const HomeHeader = () => {
   const path = usePathname();
   return (
     <div className="flex justify-between py-8 pl-5 pr-9">
-      <Image alt="" src={""} />
+      <div></div>
+      {/* <Image alt="" src={""} /> */}
 
       <div className="flex  justify-end gap-6">
         <Link

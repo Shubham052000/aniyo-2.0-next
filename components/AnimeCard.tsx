@@ -1,14 +1,9 @@
+"use client";
 import { AnimeType } from "@/types/types";
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 type AnimeCardProps = {
   anime: AnimeType;
@@ -22,13 +17,22 @@ export const formatName = (title: string) => {
 };
 
 const AnimeCard: React.FC<AnimeCardProps> = ({ anime }) => {
-  console.log(anime.images.webp.large_image_url);
+  const router = useRouter();
+
+  const cardClickHandler = () => {
+    router.push(`/anime/${anime.mal_id}`);
+  };
+
   return (
-    <div className="flex flex-col text-left">
+    <div
+      className="flex cursor-pointer flex-col text-left"
+      onClick={cardClickHandler}
+    >
       <Card className="w-[1/5] overflow-hidden rounded-md">
         <CardContent className="group relative h-[350px] w-[240px] overflow-hidden rounded-md">
           <Image
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-fill transition-all duration-300 ease-in-out group-hover:scale-110 "
             src={anime.images.webp.large_image_url}
             alt={anime.title}
