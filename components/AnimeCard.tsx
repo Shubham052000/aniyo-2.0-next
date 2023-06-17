@@ -25,11 +25,11 @@ const AnimeCard: React.FC<AnimeCardProps> = ({ anime }) => {
 
   return (
     <div
-      className="flex cursor-pointer flex-col text-left"
+      className="group flex cursor-pointer flex-col text-left"
       onClick={cardClickHandler}
     >
-      <Card className="w-[1/5] overflow-hidden rounded-md">
-        <CardContent className="group relative h-[350px] w-[240px] overflow-hidden rounded-md">
+      <Card className="w-[240px] overflow-hidden rounded-md">
+        <CardContent className="relative h-[350px] ">
           <Image
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -41,9 +41,12 @@ const AnimeCard: React.FC<AnimeCardProps> = ({ anime }) => {
         </CardContent>
       </Card>
       <p className="text-md mt-1">{formatName(anime.title)}</p>
-      <p className="text-xs text-slate-400">
-        {anime.aired.string.split("to")[0]}
-      </p>
+      <div className="flex justify-between">
+        <p className="text-xs text-slate-400">
+          {anime.aired.string.split("to")[0]}
+        </p>
+        <p className="text-xs text-slate-300">✨: {anime.score ?? "N/A"}</p>
+      </div>
     </div>
   );
 };

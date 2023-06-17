@@ -2,9 +2,14 @@ export type AnimeType = {
   aired: any;
   airing: boolean;
   approved: boolean;
-  broadcast: any;
+  broadcast: {
+    day: string;
+    string: string;
+    time: string;
+    timezone: string;
+  };
   demographics: any;
-  genres: any;
+  genres: { mal_id: number; type: string; name: string }[];
   images: { jpg: any; webp: any };
   mal_id: number;
   members: number;
@@ -28,6 +33,7 @@ export type AnimeType = {
   type: string;
   url: string;
   year: number;
+  producers: { mal_id: number; type: string; name: string; url: string }[];
 };
 
 export type AnimeListType = {
