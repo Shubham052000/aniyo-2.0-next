@@ -17,15 +17,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={raleway.className}>
-        <header>
-          <HomeHeader />
-        </header>
-
-        <main className=" text-center">{children}</main>
-
-        <footer>
-          <HomeFooter />
-        </footer>
+        <div className="flex h-screen flex-col ">
+          <header>
+            <HomeHeader />
+          </header>
+          <main className="mb-auto text-center">{children}</main>
+          <footer>
+            <HomeFooter />
+          </footer>
+        </div>
       </body>
     </html>
   );

@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
     <>
-      <h1 className="mb-2 mt-14 text-4xl font-semibold">
+      <h1 className="mb-2 mt-14 text-4xl font-semibold text-slate-200">
         Welcome to Aniyo: Your new Anime-ctionary
       </h1>
       <p className="text- mb-14 text-lg text-slate-300">

@@ -36,7 +36,7 @@ const page = () => {
 
   return (
     <>
-      <div className="mx-auto mt-8 w-1/2">
+      <div className="mx-auto mt-16 w-1/2">
         <Input
           ref={inputRef}
           className="h-16 text-xl"

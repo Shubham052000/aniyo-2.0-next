@@ -37,7 +37,10 @@ const AnimeCard: React.FC<AnimeCardProps> = ({ anime }) => {
             src={anime.images.webp.large_image_url}
             alt={anime.title}
           />
-          <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/40 to-transparent group-hover:from-transparent group-hover:to-transparent"></div>
+          <div
+            id="dark-overlay"
+            className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black/20 to-transparent group-hover:from-transparent group-hover:to-transparent"
+          ></div>
         </CardContent>
       </Card>
       <p className="text-md mt-1">{formatName(anime.title)}</p>
