@@ -3,6 +3,7 @@ import AnimeCarousel from "@/components/AnimeCarousel";
 import { Input } from "@/components/ui/input";
 import { AnimeListType } from "@/types/types";
 import React, { useEffect, useRef, useState } from "react";
+import { Loader2 } from "lucide-react";
 
 const page = () => {
   const [searchedAnime, setSearchedAnime] = useState<string>("");
@@ -47,11 +48,21 @@ const page = () => {
         />
       </div>
 
-      {loading && !fetchedAnimeList && <p className="text-2xl">Loading...</p>}
+      {searchedAnime.length < 3 && searchedAnime.length > 0 && (
+        <p className="mt-16 text-slate-400">
+          Hmm... 🤔 try typing more letters
+        </p>
+      )}
 
-      {fetchedAnimeList && (
+      {loading && !fetchedAnimeList && (
+        <div className="mt-16 w-full">
+          <Loader2 className="mx-auto h-16 w-16 animate-spin text-slate-400" />
+        </div>
+      )}
+
+      {fetchedAnimeList && fetchedAnimeList.data.length > 0 && (
         <>
-          <p className="mt-8 text-center text-3xl">Search Results: </p>
+          <p className="mb-10 mt-8 text-center text-3xl">Search Results: </p>
           <AnimeCarousel animeList={fetchedAnimeList} />
         </>
       )}
