@@ -20,7 +20,7 @@ export default async function Home() {
 
   return (
     <>
-      <h1 className="mb-2 mt-14 text-4xl font-semibold text-slate-200">
+      <h1 className="mb-3 mt-14 text-4xl font-semibold text-slate-200">
         <span>
           <TooltipComp />
         </span>{" "}
