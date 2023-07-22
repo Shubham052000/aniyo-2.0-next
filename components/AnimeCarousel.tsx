@@ -7,7 +7,7 @@ export type AnimeCarouselProps = {
 
 const AnimeCarousel: React.FC<AnimeCarouselProps> = ({ animeList }) => {
   return (
-    <div className="mb-28 flex w-full flex-wrap justify-center gap-6 px-11">
+    <div className="mx-auto mb-28 flex w-[90%] flex-wrap justify-center gap-6 px-11">
       {animeList.data?.slice(0, 10).map((anime) => {
         return <AnimeCard key={anime.mal_id} anime={anime} />;
       })}

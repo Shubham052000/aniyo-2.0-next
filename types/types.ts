@@ -34,6 +34,7 @@ export type AnimeType = {
   url: string;
   year: number;
   producers: { mal_id: number; type: string; name: string; url: string }[];
+  studios: { mal_id: number; type: string; name: string; url: string }[];
 };
 
 export type AnimeListType = {
