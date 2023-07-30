@@ -5,7 +5,7 @@ import { AnimeListType } from "@/types/types";
 import React, { useEffect, useRef, useState } from "react";
 import { Loader2 } from "lucide-react";
 
-const page = () => {
+const Search = () => {
   const [searchedAnime, setSearchedAnime] = useState<string>("");
   const [fetchedAnimeList, setFetchedAnimeList] =
     useState<AnimeListType | null>();
@@ -70,4 +70,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Search;

@@ -1,11 +1,5 @@
 import AnimeCarousel from "@/components/AnimeCarousel";
 import TooltipComp from "@/components/TooltipComp";
-import {
-  TooltipProvider,
-  TooltipContent,
-  Tooltip,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
 const getAnimeList = async (endPoint: string) => {
   const res = await fetch(`https://api.jikan.moe/v4${endPoint}`, {
